@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Form Validation</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+</head>
+
+<body>
+
+    <div class="container">
+        <form class="row g-3 mt-2" onsubmit="formValidation(); return false">
+            <h2>Log-in Form</h2>
+            <div class="col-md-6">
+                <input type="text" class="form-control" id="email" name="email" placeholder="Enter your email"/>
+            </div>
+            <div class="col-md-6">
+                <input type="password" class="form-control" id="password" name="password"
+                    placeholder="Enter your password"/>
+            </div>
+            <div class="col-12">
+                <textarea name="address" class="form-control" id="address" placeholder="Enter your address here..."></textarea>
+            </div>
+            <div class="col-6">
+                <input type="text" class="form-control" id="city" name="city" placeholder="City"/>
+            </div>
+            <div class="col-4">
+                <input type="text" class="form-control" id="state" name="state" placeholder="State"/>
+            </div>
+            <div class="col-2">
+                <input type="text" class="form-control" id="zip" name="zip" placeholder="Zip"/>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck"/>
+                <label for="">Check me out</label>
+            </div>
+            <div class="col">
+                <button type="submit" class="btn btn-primary">Sign in</button>
+                <button type="reset" class="btn btn-primary">Reset</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+        <script>
+            function formValidation(){
+                let email = document.getElementById('email');
+                let password = document.getElementById('password');
+                let address = document.getElementById('address');
+
+                if(email.value == ''){
+                    email.classList.add('is-invalid');
+                    email.classList.remove('is-valid');
+                }else{
+                    email.classlist.add('is-valid');
+                    email.classList.remove('is-invalid');
+                }
+
+                if(password.value == ''){
+                    password.classList.add('is-invalid');
+                    password.classList.remove('is-valid');
+                }else{
+                    password.classList.add('is-valid');
+                    password.classList.remove('is-invalid');
+                }
+
+                if(address.value == ''){
+                    address.classList.add('is-invalid');
+                    address.classList.remove('is-valid');
+                }else{
+                    address.classList.add('is-valid');
+                    address.classList.remove('is-invalid');
+                }
+
+                if(city.value == ''){
+                    city.classList.add('is-invalid');
+                    city.classList.remove('is-valid');
+                }else{
+                    city.classList.add('is-valid');
+                    city.classList.remove('is-invalid');
+                }
+
+                if(state.value == ''){
+                    state.classList.add('is-invalid');
+                    state.classList.remove('is-valid');
+                }else{
+                    state.classList.add('is-valid');
+                    state.classList.remove('is-invalid');
+                }
+
+                if(zip.value == ''){
+                    zip.classList.add('is-invalid');
+                    zip.classList.remove('is-valid');
+                }else{
+                    zip.classList.add('is-valid');
+                    zip.classList.remove('is-invalid');
+                }
+            }
+        </script>
+</body>
+
+</html>
